@@ -29,7 +29,6 @@ jobs:
 
   tests:
     needs: lint
-
     steps:
       - uses: actions/checkout@v2
 
@@ -51,7 +50,6 @@ jobs:
 
   deploy:
     needs: tests
-
     steps:
       - uses: actions/checkout@v2
 
