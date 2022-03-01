@@ -28,7 +28,6 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
   tests:
-    needs: lint
     steps:
       - uses: actions/checkout@v2
 
@@ -49,7 +48,6 @@ jobs:
 
 
   deploy:
-    needs: tests
     steps:
       - uses: actions/checkout@v2
 
